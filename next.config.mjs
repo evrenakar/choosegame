@@ -1,8 +1,12 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
     images: {
-        domains: ['https://evrenakar.github.io/**'],
-      },
-};
-
-export default nextConfig;
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'evrenakar.github.io',
+          port: '',
+        },
+      ],
+    },
+  }
